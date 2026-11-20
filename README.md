@@ -6,18 +6,21 @@
 
 Entry for the [make.fun bounty "Sum up 19 November's world news in one image"](https://make.fun/bounty/news-image-20261119) ($250, 50 places paid).
 
-`entry.png` is a newspaper front page summing up Thursday, 19 November 2026:
+`entry.png` is a flat-drawn newspaper front page summing up Thursday, 19 November 2026 — 40 stories, evening-complete:
 
-- **Lead:** Trump, Xi and Putin meet in Shenzhen for their first trilateral talks, with the Ukraine and Iran wars on the agenda
-- **Ukraine:** Kerch Bridge hit again overnight, a third attack in a week, hitting its rail section; traffic halted
-- **Gaza:** Israeli tanks cross the Yellow Line, the first ground advance since the October 2025 ceasefire; Hamas calls it a breach
-- **World Court:** the ICJ rules today on whether Myanmar's 2017 crackdown on the Rohingya was genocide
-- **Business:** Anthropic shares debut on Nasdaq as ANT after pricing its IPO at $83 a share, above its $70–$78 range
-- **Also:** GTA VI launches today, back in Vice City after 13 years (Metacritic 99); Iran hits a US base in Kuwait, its first attack there since September
+- **Lead:** Trump, Xi and Putin meet in Shenzhen for their first-ever trilateral talks (~90 min, Kylin Villa). Their joint "Declaration toward Peace" backs UN reform, more refined fuel, ICC limits and "a nuclear war cannot be won". Ukraine and Iran are not named — no ceasefire was announced.
+- **World Court:** the ICJ rules 9–6 that Myanmar committed genocide against the Rohingya in 2017 — the first time the court has held a state responsible for genocide (~10,000 killed).
+- **Business:** Anthropic debuts on Nasdaq as ANT — the biggest IPO ever ($81.3bn): priced $83, opened $111.50, closed $97.17 (+17%).
+- **Culture:** GTA VI launches, tying the highest Metacritic score ever (99), back in Vice City after 13 years.
+- **Also in the 40:** Kerch Bridge hit a third time, the Gaza tank raid ends, Iran's strike on a US base in Kuwait, Wall Street's plunge (Dow −1,101), the Berlin Coalition of the Willing summit, a US–Venezuela military deal, Cyclone Akvan, Voyager 1 one light-day out, a record $190.4m Van Gogh, and 30 more — with a "WHERE IT HAPPENED" world map, per-region counts, and a red DATE CHECK footer.
 
 ## How it is built
 
-- `draw.py` draws the front page with Pillow (crisp text, no AI artefacts) and writes `entry.png` (1024×1024).
+- `draw.py` draws the front page with Pillow (crisp text, no AI artefacts, no photographs — every picture is drawn flat) and writes `entry.png` (1024×1024).
 - `main.ts` (Node 22, standard library only) copies `entry.png` to `/output/entry.png`.
 
 Run it: `mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts`
+
+## v2
+
+Rebuilt 20 November 2026 from the evening-complete news of 19 November, following the leaderboard's top-10 template (flat one-page paper, 40 stories, 3 illustrated leads, world map, numbered list, DATE CHECK footer). It replaces the v1 entry (morning-version facts, provisional rank far outside the paid places).
